@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">MyTaskManager</string>
+    <string name="title_label">Title</string>
+    <string name="description_label">Description</string>
+    <string name="select_priority_mode_label">Select Priority</string>
+    <string name="due_date_label">Due Date</string>
+    <string name="button_save_label">Save</string>
+    <string name="label_popular">Task Priority</string>
+    <string name="menu_more">Open Menu</string>
+    <string name="menu_item_setting">Setting</string>
+    <string name="label_settings">Setting</string>
+    <string name="back">Go Back</string>
+    <string name="crash_label">Crash</string>
+    <string name="create_dummy_data">Generate Dummy Data</string>
+    <string name="toolbar_title">Task Manager</string>
+    <string name="create_task_title_placeholder">Create Task Title</string>
+    <string name="add_task_description_placeholder">Add Task Description</string>
+    <string name="clear_text">Clear</string>
+    <string name="delete_dummy_data">Clear Dummay Data</string>
+    <string name="clear_completed_task">Clear</string>
+    <string name="header_task_status">Task Status</string>
+    <string name="label_complete">Completed</string>
+    <string name="label_mark_as_complete">Click below if Task is Completed</string>
+    <string name="create_task_title">Create New Task</string>
+    <string name="create_new_task_floating_button">Navigate To Create A New Task</string>
+    <string name="empty_state_message">No worries, Lets plan the task to achieve our goals \n</string>
+    <plurals name="number_of_tasks">
+        <item quantity="one">1 Task</item>
+        <item quantity="other">%d Tasks</item>
+    </plurals>
 </resources>
