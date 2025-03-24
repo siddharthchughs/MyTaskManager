@@ -18,6 +18,7 @@ interface TasksLocalDataSource {
     suspend fun deleteAllTasks()
     suspend fun deleteAllCompleted()
     suspend fun updateTaskStatus(taskId: Int)
+    suspend fun deleteByTaskID(taskId: Int)
 }
 
 class TasksLocalDataSourceImpl @Inject constructor(
@@ -60,5 +61,9 @@ class TasksLocalDataSourceImpl @Inject constructor(
     override suspend fun deleteAllCompleted() = taskManagerDao.deleteCompletedTask()
     override suspend fun updateTaskStatus(taskId: Int) {
         taskManagerDao.updateTaskStatus(id = taskId)
+    }
+
+    override suspend fun deleteByTaskID(taskId: Int) {
+        taskManagerDao.deleteByTaskID(id = taskId)
     }
 }

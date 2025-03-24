@@ -24,6 +24,7 @@
     <string name="create_task_title">Create New Task</string>
     <string name="create_new_task_floating_button">Navigate To Create A New Task</string>
     <string name="empty_state_message">No worries, Lets plan the task to achieve our goals \n</string>
+    <string name="label_delete">Delete</string>
     <plurals name="number_of_tasks">
         <item quantity="one">1 Task</item>
         <item quantity="other">%d Tasks</item>

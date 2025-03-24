@@ -67,6 +67,7 @@ fun TaskDetailScreen(
             priority = priority,
             taskStatus = taskStatus,
             updateTask = detailedTaskViewModel::updateTaskStatus,
+            deleteTask = detailedTaskViewModel::deleteTask,
              navigateToHome = navigateToHome
         )
     }
@@ -83,6 +84,7 @@ fun TaskDetailScreenStructure(
     taskStatus: String?,
     updateTask: (Int) -> Unit,
     navigateToHome: NavHostController,
+    deleteTask: (Int) -> Unit
 ) {
     Divider(
         modifier = Modifier
@@ -105,7 +107,8 @@ fun TaskDetailScreenStructure(
         priority = priority,
         taskStatus = taskStatus,
         updateTask = updateTask,
-        navigateToHome = navigateToHome
+        navigateToHome = navigateToHome,
+        deleteTask = deleteTask
     )
 }
 
@@ -145,6 +148,7 @@ fun TaskDetailForm(
     taskStatus: String?,
     updateTask: (Int) -> Unit,
     navigateToHome: NavHostController,
+    deleteTask: (Int) -> Unit,
 ) {
     Column(
         modifier = Modifier
@@ -174,6 +178,21 @@ fun TaskDetailForm(
             )
         } else
             return
+
+        Button(
+            onClick = {
+                id?.let { deleteTask(it) }
+                navigateToHome.navigate(TaskManagerRoute.TaskHomeScreen.name)
+            },
+            modifier = Modifier
+                .fillMaxWidth()
+                .wrapContentHeight()
+        ) {
+            Text(text = stringResource(R.string.label_delete))
+
+        }
+
+
     }
 }
 
@@ -201,7 +220,6 @@ fun CompletedLayout(
         Text(text = stringResource(R.string.label_complete))
 
     }
-
 }
 
 @Composable

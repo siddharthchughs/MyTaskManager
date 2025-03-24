@@ -64,6 +64,9 @@ interface TaskManagerDao {
     )
     suspend fun updateTaskStatus(id: Int)
 
+    @Query("DELETE FROM task_manager_table where id = :id")
+    suspend fun deleteByTaskID(id: Int)
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun addNewTask(taskEntities: TaskManager)
 

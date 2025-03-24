@@ -17,4 +17,10 @@ class DetailedTaskViewModel @Inject constructor(
             tasksLocalDataSource.updateTaskStatus(taskId = id)
         }
     }
+
+    fun deleteTask(id:Int){
+        viewModelScope.launch {
+            tasksLocalDataSource.deleteByTaskID(taskId = id)
+        }
+    }
 }
